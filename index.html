@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@studio-freight/lenis"></script>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #f8f8f6 0%, #f2f2ef 100%);
+      color: #222;
+      overflow-x: hidden;
+    }
+
+    h1, h2 { 
+      color:#4f46e5;
+      font-family: 'Playfair Display', serif; }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 40px);
+      max-width: 1300px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 28px;
+
+      background: rgba(255, 255, 255, 0.55);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 14px;
+
+      box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+
+    nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: #222;
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      opacity: 1;
+      color: #4f46e5;
+    }
+
+    /* HERO */
+    .hero-wrapper { height: 120vh; }
+
+    .hero {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .hero h1 { font-size: 72px; }
+    .hero p { font-size: 20px; opacity: 0.7; }
+
+    /* CONTENT */
+    section {
+      padding: 140px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .project {
+      margin-bottom: 180px;
+    }
+
+    .text-block {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0,0,0,0.04);
+
+      padding: 60px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    .text-block.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .text-block:hover {
+      transform: translateY(-6px);
+    }
+
+    .project h2 {
+      font-size: 38px;
+      margin-bottom: 30px;
+      letter-spacing: -0.5px;
+    }
+
+    .project p {
+      line-height: 1.9;
+      font-size: 16.5px;
+      letter-spacing: 0.2px;
+      opacity: 0.9;
+      margin-bottom: 18px;
+    }
+
+    /* CV & CONTACT */
+    #cv, #contact {
+      text-align: center;
+      max-width: 700px;
+    }
+
+    #cv h2, #contact h2 {
+      margin-bottom: 20px;
+    }
+
+    #cv p, #contact p {
+      opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+      .text-block {
+        padding: 30px;
+      }
+
+      .hero h1 {
+        
+        font-size: 48px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div>Portfolio</div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="Lebenslauf.pdf" download>Lebenslauf</a>
+      <a href="#contact">Kontakt</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero-wrapper" id="heroWrapper">
+    <div class="hero" id="home">
+      <h1 id="heroTitle">Justin Furlan</h1>
+      <p id="heroSubtitle">Portfolio</p>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <section>
+
+    <div class="project">
+      <div class="text-block">
+        <h2>Mein Weg in die IT</h2>
+
+        <p>Heutzutage ist moderne Technologie ein fester Bestandteil unseres Alltags. Während vielen die reine Nutzung von Geräten ausreicht, interessiert sich nur ein Teil der Menschen auch dafür, wie diese Technik im Hintergrund funktioniert – und genau dazu zähle ich mich.</p>
+
+        <p>Mein erster richtiger Berührungspunkt war meine erste Konsole, die Nintendo Wii. Besonders das Modifizieren dieser Konsole hat mein Interesse geweckt.</p>
+
+        <p>Gemeinsam mit einem Freund habe ich erstmals Custom Software installiert und damit neue Funktionen ermöglicht, wie eigene Level in Spielen zu erstellen.</p>
+
+        <p>Ich habe schnell gemerkt, dass mir der technische Prozess dahinter mehr Spaß macht als das reine Nutzen.</p>
+
+        <p>Bis heute fasziniert mich, dass Technik kaum Grenzen hat – solange man bereit ist, Lösungen zu finden.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="text-block">
+        <h2>Minecraft Rangsystem</h2>
+
+        <p>Als jugendlicher begann ich, Minecraft zu spielen und eigene Plugins zu entwickeln.</p>
+
+        <p>Viele Projekte waren zum Lernen gedacht, einige wurden jedoch funktional und praktisch nutzbar.</p>
+
+        <p>Ein Beispiel ist ein Rangsystem-Plugin in Java, das verschiedene Benutzerrollen verwaltet.</p>
+
+        <p>Vom eingeschränkten Default-Rang bis hin zu Admin-Rechten konnte ich ein vollständiges System umsetzen.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="text-block">
+        <h2>Raspberry Pi</h2>
+
+        <p>Ich wollte VPN auf allen Geräten nutzen – auch auf solchen ohne App-Unterstützung.</p>
+
+        <p>Dafür entwickelte ich eine eigene Lösung mit einem Raspberry Pi als Netzwerk-Zwischenstelle.</p>
+
+        <p>Dieser fungiert als WLAN-Hotspot und leitet den gesamten Datenverkehr über einen VPN-Tunnel.</p>
+
+        <p>So können mehrere Geräte gleichzeitig sicher verbunden werden.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="text-block">
+        <h2>Docker</h2>
+
+        <p>In diesem Projekt ging es um die Verbindung mehrerer Technologien.</p>
+
+        <p>Durch eine modulare Architektur konnte eine stabile und erweiterbare Lösung geschaffen werden.</p>
+
+        <p>Das Projekt zeigte mir, wie wichtig Struktur und saubere Kommunikation zwischen Komponenten ist.</p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section id="contact">
+    <h2>Kontakt</h2>
+    <p>Email: justin.furlan@outlook.de</p>
+  </section>
+
+  <script>
+    const lenis = new Lenis({ duration: 1.2, smooth: true, lerp: 0.08 });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    const heroWrapper = document.getElementById('heroWrapper');
+    const title = document.getElementById('heroTitle');
+    const subtitle = document.getElementById('heroSubtitle');
+
+    window.addEventListener('scroll', () => {
+      const rect = heroWrapper.getBoundingClientRect();
+      const progress = Math.min(Math.max(-rect.top / window.innerHeight, 0), 1);
+
+      title.style.transform = `translateY(${progress * -150}px) scale(${1 - progress * 0.6})`;
+      subtitle.style.transform = `translateY(${progress * -100}px)`;
+
+      title.style.opacity = 1 - progress * 1.2;
+      subtitle.style.opacity = 1 - progress * 1.2;
+    });
+
+    const texts = document.querySelectorAll('.text-block');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    texts.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
